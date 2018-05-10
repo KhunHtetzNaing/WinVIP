@@ -1,0 +1,6 @@
+@font-face {font-family:'Zawgyi-One';
+src: url('file:///android_asset/yoeyar.woff') format('woff'), url('file:///android_asset/yoeyar.ttf') format('ttf');}
+html *
+{
+font-family: Zawgyi-One !important;
+}
