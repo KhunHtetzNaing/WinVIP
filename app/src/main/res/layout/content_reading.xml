@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="net.khn.win100.Reading"
-    tools:showIn="@layout/appbar">
+    tools:context=".ReadingActivity"
+    tools:showIn="@layout/activity_reading">
 
-
-    <WebView
-        android:id="@+id/webView"
-        android:scrollbars="none"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></WebView>
-</RelativeLayout>
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></WebView>
+
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorAccent"
+             android:id="@+id/tvComment"
+            android:text="သင့္ထင္ျမင္ခ်က္မ်ားေရးခဲ့ပါ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <WebView
+            android:scrollbars="none"
+            android:id="@+id/commentsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></WebView>
+
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>
